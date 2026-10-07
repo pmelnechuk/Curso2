@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Híbrido Box · Propuestas</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Geist:wght@400;500;600&display=swap">
+<style>
+:root{color-scheme:light;--bg:#f4f5f4;--ink:#171a19;--muted:#6b7270;--line:#e3e6e4;--dark:#0b0c0c;--green:#22d360}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Geist",system-ui,sans-serif;padding:48px 16px}
+.wrap{max-width:980px;margin:0 auto;display:flex;flex-direction:column;gap:32px}
+header{display:flex;align-items:center;gap:16px}
+header img{width:64px;height:64px;border-radius:50%}
+h1{margin:0;font-size:28px;letter-spacing:-.01em}
+header p{margin:2px 0 0;color:var(--muted)}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+a.card{display:flex;flex-direction:column;gap:10px;padding:28px;border-radius:20px;text-decoration:none;min-height:240px;border:1px solid var(--line)}
+.a{background:#fff;color:var(--ink)}
+.b{background:var(--dark);color:#f1f3f1;border-color:#262a2a}
+.card small{text-transform:uppercase;letter-spacing:.12em;font-size:12px;font-weight:600;opacity:.6}
+.card b{font-size:26px;letter-spacing:-.01em}
+.b b{font-family:"Anton",Impact,sans-serif;font-weight:400;text-transform:uppercase;font-size:34px;letter-spacing:.01em}
+.b b span{color:var(--green)}
+.card p{margin:0;opacity:.75}
+.card em{margin-top:auto;font-style:normal;font-weight:600}
+.b em{color:var(--green)}
+ul{margin:0;padding-left:20px;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header><img src="assets/logo-hibrido-box.png" alt="Híbrido Box"><div><h1>Híbrido Box · Sistema de gestión</h1><p>Dos propuestas visuales con las mismas funciones. Elegí la que más te guste.</p></div></header>
+  <div class="grid">
+    <a class="card a" href="propuesta-a-simple/index.html"><small>Propuesta A</small><b>Simple / operativa</b><p>Limpia y neutra. Botones grandes, pocas opciones a la vez y color solo para el estado de la cuota.</p><em>Abrir propuesta A →</em></a>
+    <a class="card b" href="propuesta-b-premium/index.html"><small>Propuesta B</small><b>Premium <span>/ fitness</span></b><p>Modo oscuro con la identidad del box: verde del logo, tipografía fuerte e indicadores grandes.</p><em>Abrir propuesta B →</em></a>
+  </div>
+  <ul>
+    <li>En cada propuesta, la barra superior cambia entre las vistas del <b>dueño</b> (escritorio), el <b>profesor</b> (celular) y la <b>tablet de recepción</b>.</li>
+    <li>En recepción probá con el DNI 35482117 (cuota vencida), 38901442 (vence mañana) o 40223519 (activa) y presioná Enter.</li>
+    <li>Todos los datos son ficticios.</li>
+  </ul>
+</div>
+</body>
+</html>
