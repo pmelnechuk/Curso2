@@ -1,190 +1,311 @@
 <!doctype html>
 <html lang="es"><head><meta charset="utf-8">
-<title>Propuesta comercial · Sistema de gestión para box de CrossFit · Flownix</title>
+<title>Propuesta comercial · CrossFit Control · Flownix</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Source+Sans+3:wght@400;600;700&display=swap">
 <style>
-@page{size:A4;margin:22mm 20mm 20mm}
-:root{--ink:#1c1f23;--muted:#545a61;--rule:#c9ced4;--soft:#f2f4f6;--navy:#1f3550}
+@page{size:A4;margin:0}
+:root{--ink:#1c1f23;--muted:#545a61;--rule:#c9ced4;--soft:#f2f4f6;--navy:#1f3550;--navy-soft:#e8edf3}
 *{box-sizing:border-box}
-html,body{margin:0;color:var(--ink);background:#fff;font:10.5pt/1.5 "Source Serif 4",Georgia,"Times New Roman",serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-p{margin:0 0 7pt}
-h1{font-size:22pt;line-height:1.15;margin:0 0 4pt;font-weight:700;color:var(--navy)}
-h2{font-size:13pt;margin:20pt 0 8pt;padding-bottom:3pt;border-bottom:1pt solid var(--navy);color:var(--navy);font-weight:700;break-after:avoid}
-h3{font-size:11pt;margin:12pt 0 5pt;font-weight:700;break-after:avoid}
-ul,ol{margin:0 0 8pt;padding-left:16pt}
-li{margin:0 0 3pt}
-.sans,table,.meta{font-family:"Source Sans 3","Helvetica Neue",Arial,sans-serif}
-.top{display:flex;justify-content:space-between;align-items:baseline;border-bottom:2pt solid var(--navy);padding-bottom:6pt;margin-bottom:22pt}
-.top .firm{font-family:"Source Sans 3",Arial,sans-serif;font-weight:700;letter-spacing:.18em;font-size:11pt;color:var(--navy)}
-.top .doc{font-family:"Source Sans 3",Arial,sans-serif;font-size:9pt;color:var(--muted)}
+html,body{margin:0;color:var(--ink);background:#fff;font:10pt/1.45 "Source Serif 4",Georgia,"Times New Roman",serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:210mm;height:297mm;padding:16mm 18mm 0;display:flex;flex-direction:column;overflow:hidden;break-after:page;position:relative}
+.page:last-child{break-after:auto}
+.body{flex:1;min-height:0}
+p{margin:0 0 6pt}
+h1{font-size:23pt;line-height:1.12;margin:0 0 6pt;font-weight:700;color:var(--navy)}
+h2{font-size:13pt;margin:0 0 7pt;padding-bottom:3pt;border-bottom:1pt solid var(--navy);color:var(--navy);font-weight:700}
+h3{font-size:10.5pt;margin:10pt 0 4pt;font-weight:700}
+.sec+.sec{margin-top:14pt}
+ul,ol{margin:0 0 6pt;padding-left:14pt}
+li{margin:0 0 2.5pt}
+.sans,table,.top,.foot,.cap,.label{font-family:"Source Sans 3","Helvetica Neue",Arial,sans-serif}
+.top{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1.5pt solid var(--navy);padding-bottom:5pt;margin-bottom:14pt}
+.top .firm{font-weight:700;letter-spacing:.18em;font-size:10.5pt;color:var(--navy)}
+.top .doc{font-size:8.5pt;color:var(--muted)}
+.foot{display:flex;justify-content:space-between;border-top:.5pt solid var(--rule);padding:5pt 0 10mm;font-size:7.5pt;color:#7a8087}
 .subtitle{font-size:12pt;color:var(--muted);margin-bottom:14pt}
-.meta{width:100%;border-collapse:collapse;margin-bottom:6pt;font-size:9.5pt}
-.meta td{padding:4pt 0;border-bottom:.5pt solid var(--rule);vertical-align:top}
+.meta{width:100%;border-collapse:collapse;margin-bottom:16pt;font-size:9.5pt}
+.meta td{padding:3.5pt 0;border-bottom:.5pt solid var(--rule);vertical-align:top}
 .meta td:first-child{width:34mm;color:var(--muted)}
-table.t{width:100%;border-collapse:collapse;line-height:1.3;margin:4pt 0 10pt;font-size:9.5pt;break-inside:avoid}
-table.t th{background:var(--navy);color:#fff;text-align:left;font-weight:600;padding:5pt 7pt}
-table.t td{padding:3.6pt 7pt;border-bottom:.5pt solid var(--rule);vertical-align:top}
-table.t tr.group td{background:var(--soft);font-weight:700;color:var(--navy);border-bottom:.5pt solid var(--rule)}
+table.t{width:100%;border-collapse:collapse;margin:3pt 0 8pt;font-size:9pt;line-height:1.3}
+table.t th{background:var(--navy);color:#fff;text-align:left;font-weight:600;padding:4.5pt 7pt}
+table.t td{padding:4pt 7pt;border-bottom:.5pt solid var(--rule);vertical-align:top}
+table.t td:first-child{font-weight:600}
 table.t tr.total td{font-weight:700;border-top:1pt solid var(--navy);border-bottom:0}
-table.t td.n,table.t th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
-.note{font-size:9.5pt;color:var(--muted)}
+table.t .n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+table.plain td:first-child{font-weight:400}
+.note{font-size:8.8pt;color:var(--muted)}
+.box{border:1pt solid var(--navy);background:var(--navy-soft);padding:10pt 12pt;margin:6pt 0 8pt}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.quote{border-left:2.5pt solid var(--navy);background:var(--soft);padding:7pt 10pt;margin:5pt 0 8pt;font-style:italic}
 .cols{display:grid;grid-template-columns:1fr 1fr;gap:0 14pt}
-.cols h3{margin-top:6pt}
-.keep{break-inside:avoid}
-.sign{margin-top:22pt;display:grid;grid-template-columns:1fr 1fr 1fr;gap:16pt;break-inside:avoid}
-.sign div{border-top:.75pt solid var(--ink);padding-top:3pt;font-family:"Source Sans 3",Arial,sans-serif;font-size:9pt;color:var(--muted)}
-.swatch{display:inline-block;width:8pt;height:8pt;border-radius:50%;vertical-align:-.5pt;margin-right:5pt}
+.label{font-size:8pt;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);margin-bottom:3pt}
+.shot{border:.5pt solid var(--rule);display:block;width:100%}
+.cap{font-size:8.5pt;color:var(--muted);margin-top:4pt}
+.cap b{color:var(--ink)}
+.screens{display:grid;grid-template-columns:1fr 44mm;gap:10pt;align-items:start}
+.price{display:grid;grid-template-columns:1fr 62mm;gap:14pt;align-items:start;border:1.2pt solid var(--navy);padding:12pt 14pt;margin:4pt 0 10pt}
+.price .amount{font-family:"Source Sans 3",Arial,sans-serif;font-size:34pt;font-weight:700;color:var(--navy);line-height:1;margin:4pt 0 3pt}
+.price .sub{font-family:"Source Sans 3",Arial,sans-serif;font-size:9pt;font-weight:600;color:var(--muted)}
+.price .mant{margin-top:12pt;padding-top:8pt;border-top:.5pt solid var(--rule);font-family:"Source Sans 3",Arial,sans-serif;font-size:9.5pt}
+.price .mant b{font-size:13pt;color:var(--navy)}
+.opt{display:grid;grid-template-columns:1fr 40mm;gap:12pt;border:.75pt solid var(--rule);padding:9pt 12pt;margin-bottom:10pt;align-items:center}
+.opt .amount{font-family:"Source Sans 3",Arial,sans-serif;font-size:17pt;font-weight:700;color:var(--navy);text-align:right;line-height:1.1}
+.opt .amount small{display:block;font-size:8.5pt;font-weight:600;color:var(--muted)}
+.sign{margin-top:18pt;display:grid;grid-template-columns:1fr 1fr;gap:22pt}
+.sign .party{font-family:"Source Sans 3",Arial,sans-serif;font-size:9pt;font-weight:700;color:var(--navy);margin-bottom:22pt}
+.sign .line{border-top:.75pt solid var(--ink);padding-top:2pt;margin-bottom:16pt;font-family:"Source Sans 3",Arial,sans-serif;font-size:8pt;color:var(--muted)}
+.swatch{display:inline-block;width:7pt;height:7pt;border-radius:50%;vertical-align:0;margin-right:4pt}
+.cond li{margin-bottom:3.5pt}
 </style></head><body>
 
+<!-- 1 · Portada, problema y solución -->
+<div class="page"><div class="body">
 <div class="top"><span class="firm">FLOWNIX</span><span class="doc">Propuesta comercial · 9 de octubre de 2026</span></div>
-
-<h1>Sistema de gestión de socios, cuotas y asistencia</h1>
-<p class="subtitle">Propuesta para el box de CrossFit</p>
-
+<h1>Control de cuotas y asistencias para el box</h1>
+<p class="subtitle">CrossFit Control · Sistema de gestión instalado y funcionando</p>
 <table class="meta">
   <tr><td>Destinatario</td><td>Guille, dueño del box</td></tr>
   <tr><td>Preparado por</td><td>Flownix</td></tr>
-  <tr><td>Fecha</td><td>9 de octubre de 2026</td></tr>
+  <tr><td>Fecha de emisión</td><td>9 de octubre de 2026</td></tr>
+  <tr><td>Vigencia</td><td>15 días corridos, hasta el 24 de octubre de 2026</td></tr>
 </table>
 
-<h2>1. Situación actual y objetivo</h2>
-<p>Hoy la asistencia y las cuotas se registran en un cuaderno. Para saber quién tiene la cuota vencida o cuántos alumnos vinieron a una clase hay que revisarlo a mano.</p>
-<p>La propuesta reemplaza ese registro por un sistema web con una tablet en la recepción, con tres objetivos:</p>
+<div class="sec">
+<h2>Situación actual</h2>
+<p>La asistencia y las cuotas se registran en un cuaderno. Esto genera tres problemas:</p>
 <ul>
-  <li>Registrar la llegada de cada alumno con su DNI.</li>
-  <li>Mostrar en el momento el estado de su cuota.</li>
-  <li>Tener socios, pagos y asistencia en un mismo lugar.</li>
+  <li>Para saber quién tiene la cuota vencida hay que revisar el registro a mano.</li>
+  <li>Los atrasos se detectan tarde y el reclamo depende de la memoria de cada entrenador.</li>
+  <li>No es posible saber cuántos alumnos asistieron, ni a qué clase, sin estar en el box.</li>
 </ul>
+</div>
 
-<h2>2. Funcionamiento</h2>
-<h3>2.1 Registro en la recepción</h3>
-<ol>
-  <li>El alumno ingresa su DNI en la tablet. No necesita instalar ninguna aplicación.</li>
-  <li>La pantalla muestra el estado de su cuota.</li>
-  <li>El sistema registra la asistencia y la clase a la que asistió.</li>
-</ol>
+<div class="sec">
+<h2>Solución propuesta</h2>
+<p>CrossFit Control reemplaza el cuaderno por un sistema web con una tablet en la recepción:</p>
+<ul>
+  <li><b>Cada alumno registra su llegada con el DNI.</b> No necesita instalar ninguna aplicación.</li>
+  <li><b>La recepción ve en el momento si la cuota está al día</b>, por vencer o vencida.</li>
+  <li><b>Los entrenadores recuerdan los vencimientos por WhatsApp</b> con un solo toque desde el celular.</li>
+  <li><b>El dueño controla socios, pagos y asistencias desde el celular</b>, sin estar en el box.</li>
+</ul>
+<p>El resultado esperado es detectar los atrasos a tiempo, reducir las cuotas impagas y tener la información del box siempre disponible.</p>
+</div>
+
+<div class="box sans" style="margin-top:12pt">
+  <div class="label">En síntesis</div>
+  <p style="font-size:11pt;line-height:1.45">Por <b>USD 1.200</b>, Flownix deja funcionando un sistema completo para registrar socios, controlar cuotas y supervisar asistencias desde el celular, con la tablet instalada en la recepción y sin que los alumnos tengan que usar aplicaciones.</p>
+</div>
+</div>
+<div class="foot"><span>Flownix · Propuesta comercial · CrossFit Control</span><span>Página 1 de 6</span></div></div>
+
+<!-- 2 · Cómo funciona -->
+<div class="page"><div class="body">
+<div class="top"><span class="firm">FLOWNIX</span><span class="doc">Propuesta comercial · 9 de octubre de 2026</span></div>
+<h2>Cómo funciona el sistema</h2>
+<p class="note" style="margin-bottom:8pt">Capturas del prototipo presentado, con datos de ejemplo.</p>
+
+<div class="screens">
+  <div>
+    <img class="shot" src="propuesta-img/recepcion.png" alt="Pantalla de recepción">
+    <p class="cap"><b>1. Recepción.</b> El alumno ingresa su DNI y presiona Enter. La pantalla muestra su nombre, el estado de la cuota y la fecha de vencimiento, y confirma la asistencia. A los pocos segundos queda lista para el siguiente alumno.</p>
+    <table class="t" style="margin-top:6pt">
+      <tr><td style="width:30%"><span class="swatch" style="background:#2e9e62"></span>Activa</td><td>Cuota al día.</td></tr>
+      <tr><td><span class="swatch" style="background:#d9a400"></span>Por vencer</td><td>Vence en 7 días o menos.</td></tr>
+      <tr><td><span class="swatch" style="background:#c43c3c"></span>Vencida</td><td>Se muestra el aviso. El ingreso queda a criterio del box.</td></tr>
+    </table>
+  </div>
+  <div>
+    <img class="shot" src="propuesta-img/profesor.png" alt="Vista del profesor en el celular">
+    <p class="cap"><b>2. Profesor.</b> Desde cualquier celular: alumnos de la clase, total de asistentes y estado de la membresía de cada uno.</p>
+  </div>
+</div>
+
+<div style="margin-top:8pt">
+  <img class="shot" src="propuesta-img/duenio.png" alt="Panel del dueño">
+  <p class="cap"><b>3. Dueño.</b> Socios activos, vencimientos de la semana, cuotas vencidas, asistencias del día e ingresos del mes. La información financiera solo es visible para el dueño.</p>
+</div>
+</div>
+<div class="foot"><span>Flownix · Propuesta comercial · CrossFit Control</span><span>Página 2 de 6</span></div></div>
+
+<!-- 3 · Funcionalidades y permisos -->
+<div class="page"><div class="body">
+<div class="top"><span class="firm">FLOWNIX</span><span class="doc">Propuesta comercial · 9 de octubre de 2026</span></div>
+<div class="sec">
+<h2>Funcionalidades incluidas</h2>
 <table class="t">
-  <tr><th style="width:30%">Estado</th><th>Significado</th></tr>
-  <tr><td><span class="swatch" style="background:#2e9e62"></span>Al día</td><td>La cuota está paga.</td></tr>
-  <tr><td><span class="swatch" style="background:#d9a400"></span>Por vencer</td><td>La cuota vence en 7 días o menos.</td></tr>
-  <tr><td><span class="swatch" style="background:#c43c3c"></span>Vencida</td><td>La cuota no se renovó. El sistema muestra el aviso, pero no impide el ingreso: esa decisión queda a criterio del box.</td></tr>
+  <tr><th style="width:32%">Módulo</th><th>Descripción</th></tr>
+  <tr><td>Gestión de socios</td><td>Altas y edición de socios, con DNI y datos de contacto.</td></tr>
+  <tr><td>Cuotas y pagos</td><td>Registro de pagos con importe y fecha. Cálculo automático de vencimientos.</td></tr>
+  <tr><td>Asistencia por DNI</td><td>Registro de la llegada en la tablet de la recepción.</td></tr>
+  <tr><td>Clases y turnos</td><td>Cada asistencia se asigna al horario de clase correspondiente.</td></tr>
+  <tr><td>Control desde el celular</td><td>Vistas para el dueño y para los profesores.</td></tr>
+  <tr><td>WhatsApp directo</td><td>Recordatorios de vencimiento manuales, en un toque.</td></tr>
 </table>
+<p>Además, el sistema incluye:</p>
+<ul>
+  <li>Consulta de asistencias en tiempo real.</li>
+  <li>Alertas de cuotas por vencer y vencidas.</li>
+  <li>Historial de operaciones de cada socio.</li>
+  <li>Permisos diferenciados por usuario.</li>
+  <li>Reportes financieros básicos, de acceso exclusivo del dueño.</li>
+</ul>
+</div>
 
-<h3>2.2 Usuarios y permisos</h3>
+<div class="sec">
+<h2>Recordatorios por WhatsApp</h2>
+<p>Desde el celular, los entrenadores ven qué socios tienen la cuota por vencer o vencida. Con un botón se abre WhatsApp con un mensaje de recordatorio ya preparado, que el entrenador puede revisar, editar y enviar.</p>
+<p class="label" style="margin-top:6pt">Ejemplo de mensaje</p>
+<div class="quote">Hola Juan, ¿cómo estás? Te escribimos desde el box para recordarte que tu cuota venció el 7/10. Cuando puedas, comunicate con nosotros para regularizarla. ¡Gracias!</div>
+<p class="note">El envío es manual: el sistema no envía mensajes automáticos, no requiere una cuenta de WhatsApp Business ni genera cargos por mensaje. El envío depende de que WhatsApp esté disponible en el dispositivo del usuario.</p>
+</div>
+
+<div class="sec">
+<h2>Usuarios y permisos</h2>
 <table class="t">
-  <tr><th style="width:30%">Usuario</th><th>Acceso</th></tr>
-  <tr><td>Dueño</td><td>Socios, pagos y clases. Ingresos, montos y reportes básicos son de acceso exclusivo.</td></tr>
-  <tr><td>Entrenadores (4)</td><td>Asistencia de su clase desde el celular. El alta de socios y el registro de pagos se habilitan según los permisos que se acuerden.</td></tr>
+  <tr><th style="width:32%">Usuario</th><th>Acceso</th></tr>
+  <tr><td>Dueño</td><td>Acceso completo: socios, pagos, clases, asistencias, ingresos y reportes financieros.</td></tr>
+  <tr><td>Profesores (4)</td><td>Asistencia de sus clases, estado de cuotas y recordatorios por WhatsApp. El alta de socios y el registro de pagos se habilitan según lo que defina el dueño. No acceden a ingresos ni reportes financieros.</td></tr>
   <tr><td>Alumnos</td><td>Ingreso del DNI en la tablet de la recepción.</td></tr>
 </table>
-
-<h3>2.3 Alcance y condiciones de uso</h3>
-<ul>
-  <li>Se contempla una única membresía, sin límite de días de entrenamiento.</li>
-  <li>El sistema registra la asistencia por clase. No incluye reservas ni control de cupos.</li>
-  <li>Requiere conexión a internet para registrar la asistencia en tiempo real.</li>
-  <li>Ante un corte de conexión, se aplica un procedimiento manual acordado previamente con la recepción.</li>
-</ul>
-
-<h2>3. Plan de implementación</h2>
-<table class="t">
-  <tr><th style="width:30%">Etapa</th><th>Actividades</th></tr>
-  <tr><td>1. Definición</td><td>Datos de los socios a cargar, forma de distinguir las clases y permisos de cada usuario.</td></tr>
-  <tr><td>2. Preparación</td><td>Configuración del sistema, la tablet y el teclado numérico. El modelo de los equipos se confirma con el box antes de la instalación.</td></tr>
-  <tr><td>3. Prueba piloto</td><td>Uso en una clase para verificar el registro de asistencia, el estado de las cuotas y el funcionamiento en la recepción.</td></tr>
-  <tr><td>4. Entrega</td><td>Ajustes acordados y explicación de uso al equipo.</td></tr>
-</table>
-<p class="note">El plazo de implementación se confirma al cerrar el alcance y los equipos.</p>
-
-<h2>4. Módulos opcionales</h2>
-<div class="cols">
-  <div class="keep">
-    <h3>Registro de ventas</h3>
-    <ul>
-      <li>Registro de las ventas del box (remeras, calleras y otros artículos).</li>
-      <li>Consulta del historial de ventas.</li>
-      <li>Lista de productos definida junto con el box.</li>
-      <li>No incluye tienda online, cobros por la web ni control de stock.</li>
-    </ul>
-  </div>
-  <div class="keep">
-    <h3>Recordatorios de vencimiento</h3>
-    <ul>
-      <li>Aviso al socio antes del vencimiento de la cuota.</li>
-      <li>Medio de envío y anticipación definidos por el box.</li>
-      <li>El proveedor de mensajes y el consentimiento de los socios se acuerdan antes de activarlo.</li>
-      <li>El costo de cada mensaje se cobra aparte, según el proveedor.</li>
-    </ul>
-  </div>
+<p class="note">El sistema contempla una única membresía, sin límite de días de entrenamiento. No incluye reservas ni control de cupos.</p>
 </div>
-
-<h2>5. Qué incluye la contratación</h2>
-<div class="cols">
-  <div class="keep">
-    <h3>La gestión base incluye</h3>
-    <ul>
-      <li>Sistema de gestión.</li>
-      <li>Tablet y teclado numérico, con cables y cargadores.</li>
-      <li>Instalación estándar sobre el escritorio de la recepción.</li>
-      <li>Configuración de la recepción.</li>
-      <li>Prueba piloto con una clase.</li>
-      <li>Explicación de uso al equipo.</li>
-      <li>Reportes básicos.</li>
-    </ul>
-  </div>
-  <div class="keep">
-    <h3>El mantenimiento incluye</h3>
-    <ul>
-      <li>Alojamiento y funcionamiento del sistema.</li>
-      <li>Corrección de fallas.</li>
-      <li>Asistencia ante errores de carga.</li>
-      <li>Ajustes menores dentro del alcance acordado.</li>
-    </ul>
-    <p class="note">No incluye nuevas funciones ni módulos. Los informes adicionales se cotizan por separado.</p>
-  </div>
 </div>
-<p class="note">Si la instalación requiere un montaje especial o trabajo adicional en el box, se acuerda antes de coordinar la visita.</p>
+<div class="foot"><span>Flownix · Propuesta comercial · CrossFit Control</span><span>Página 3 de 6</span></div></div>
 
-<div style="break-before:page"></div>
-<h2>6. Inversión y esquema de pago</h2>
-<p>Todos los valores están expresados en dólares estadounidenses.</p>
-<h3>Valores</h3>
+<!-- 4 · Implementación, garantía y soporte -->
+<div class="page"><div class="body">
+<div class="top"><span class="firm">FLOWNIX</span><span class="doc">Propuesta comercial · 9 de octubre de 2026</span></div>
+<div class="sec">
+<h2>Implementación · 30 días corridos</h2>
+<p>El plazo comienza cuando se cumplen tres condiciones: recepción del anticipo, confirmación de los requisitos funcionales y disponibilidad de la información necesaria para configurar el sistema.</p>
 <table class="t">
-  <tr><th>Concepto</th><th class="n" style="width:28%">Importe</th></tr>
-  <tr class="group"><td colspan="2">Inversión inicial (pago único)</td></tr>
-  <tr><td>Gestión base</td><td class="n">USD 1.200</td></tr>
-  <tr><td>Módulo opcional: registro de ventas</td><td class="n">USD 250</td></tr>
-  <tr><td>Módulo opcional: recordatorios de vencimiento</td><td class="n">USD 300</td></tr>
-  <tr class="group"><td colspan="2">Total inicial según la opción elegida</td></tr>
-  <tr><td>Gestión base</td><td class="n">USD 1.200</td></tr>
-  <tr><td>Gestión base + registro de ventas</td><td class="n">USD 1.450</td></tr>
-  <tr><td>Gestión base + recordatorios de vencimiento</td><td class="n">USD 1.500</td></tr>
-  <tr><td>Gestión base + ambos módulos</td><td class="n">USD 1.750</td></tr>
-  <tr class="group"><td colspan="2">Costos mensuales</td></tr>
-  <tr><td>Mantenimiento, desde la puesta en marcha</td><td class="n">USD 50 por mes</td></tr>
-  <tr><td>Mensajes de recordatorios (solo si se contrata el módulo)</td><td class="n">Según proveedor y uso</td></tr>
-</table>
-
-<div class="keep">
-<h3>Esquema de pago</h3>
-<p>La gestión base se abona en tres pagos, vinculados al avance del trabajo:</p>
-<table class="t">
-  <tr><th style="width:20%">Pago</th><th class="n" style="width:10%">%</th><th class="n" style="width:16%">Importe</th><th>Momento</th></tr>
-  <tr><td>Anticipo</td><td class="n">40%</td><td class="n">USD 480</td><td>Al iniciar el trabajo.</td></tr>
-  <tr><td>Segundo pago</td><td class="n">30%</td><td class="n">USD 360</td><td>Al revisar el sistema en funcionamiento, antes de la instalación.</td></tr>
-  <tr><td>Pago final</td><td class="n">30%</td><td class="n">USD 360</td><td>Al instalar el sistema y entregarlo al equipo.</td></tr>
-  <tr class="total"><td>Total</td><td class="n">100%</td><td class="n">USD 1.200</td><td></td></tr>
+  <tr><th style="width:32%">Etapa</th><th>Actividades</th></tr>
+  <tr><td>1. Definición y configuración</td><td>Datos de socios, permisos, reglas de membresía y horarios de clase.</td></tr>
+  <tr><td>2. Desarrollo y pruebas</td><td>Pantallas, pagos, asistencias y controles.</td></tr>
+  <tr><td>3. Instalación y prueba piloto</td><td>Configuración de la tablet y el teclado numérico. Prueba con alumnos reales.</td></tr>
+  <tr><td>4. Entrega y puesta en marcha</td><td>Validación de las funcionalidades y explicación de uso.</td></tr>
 </table>
 <ul>
-  <li>Los módulos opcionales, si se contratan, se suman al precio base.</li>
-  <li>El mantenimiento se abona mensualmente desde la puesta en marcha.</li>
+  <li>La implementación incluye una explicación inicial para los cuatro entrenadores, sin costo adicional.</li>
+  <li>Las demoras por falta de acceso al establecimiento, información pendiente o cambios de alcance acordados pueden requerir reprogramar el plazo. La nueva fecha se comunica al cliente.</li>
 </ul>
 </div>
 
-<div class="keep">
-<h2>7. Próximos pasos</h2>
-<p>Con la conformidad del box, se confirman los permisos y los equipos y se coordina la fecha de inicio.</p>
-<div class="sign"><div>Firma</div><div>Aclaración</div><div>Fecha</div></div>
+<div class="sec">
+<h2>Garantía inicial · 30 días corridos</h2>
+<p>Flownix incluye una garantía de 30 días corridos desde la puesta en marcha. Durante ese período se corrigen sin costo los errores atribuibles al desarrollo o a la configuración inicial que impidan el funcionamiento correcto de las funcionalidades contratadas.</p>
+<ul>
+  <li>No incluye nuevas funcionalidades, cambios del alcance aprobado ni problemas causados por factores externos al software, como cortes de internet, fallas de los dispositivos o servicios de terceros.</li>
+  <li>La garantía del equipamiento físico se rige por las condiciones del fabricante o vendedor.</li>
+  <li>Vencidos los 30 días, la corrección de errores del software sigue cubierta por el mantenimiento mensual.</li>
+</ul>
 </div>
 
+<div class="sec">
+<h2>Mantenimiento mensual · USD 50</h2>
+<table class="t">
+  <tr><th style="width:32%">Incluye</th><th>Detalle</th></tr>
+  <tr><td>Funcionamiento técnico</td><td>Alojamiento de la aplicación y la base de datos, mantenimiento de la infraestructura, copias de respaldo y verificación del servicio.</td></tr>
+  <tr><td>Corrección de errores</td><td>Solución de fallas del software en los módulos contratados.</td></tr>
+  <tr><td>Asistencia técnica remota</td><td>Consultas de uso, incidencias y problemas de configuración.</td></tr>
+  <tr><td>Ajustes menores</td><td>Hasta 60 minutos por mes de pequeñas modificaciones sobre funcionalidades existentes. No acumulables.</td></tr>
+</table>
+<p class="label" style="margin-top:8pt">Horario de soporte</p>
+<p>La asistencia técnica se brinda de lunes a viernes, en días hábiles, por WhatsApp o correo electrónico, con una primera respuesta dentro de los dos días hábiles. Las incidencias que impidan usar las funciones principales tienen tratamiento prioritario. El tiempo de resolución depende de la complejidad del problema.</p>
+</div>
+</div>
+<div class="foot"><span>Flownix · Propuesta comercial · CrossFit Control</span><span>Página 4 de 6</span></div></div>
+
+<!-- 5 · Inversión -->
+<div class="page"><div class="body">
+<div class="top"><span class="firm">FLOWNIX</span><span class="doc">Propuesta comercial · 9 de octubre de 2026</span></div>
+<h2>Inversión para poner en marcha el sistema</h2>
+
+<div class="price">
+  <div>
+    <div class="label">Sistema completo, instalado y funcionando</div>
+    <div class="amount">USD 1.200</div>
+    <div class="sub">Pago único · Inversión inicial</div>
+    <div class="mant">Mantenimiento mensual: <b>USD 50</b><br>Desde la puesta en marcha.</div>
+  </div>
+  <div>
+    <div class="label">Incluye</div>
+    <ul style="margin:0">
+      <li>Desarrollo del sistema de gestión.</li>
+      <li>Gestión de socios, pagos, cuotas y asistencias.</li>
+      <li>Accesos diferenciados para dueño y profesores.</li>
+      <li>Alertas de vencimiento y botón de WhatsApp.</li>
+      <li>Tablet y teclado numérico con accesorios básicos.</li>
+      <li>Configuración, instalación y prueba piloto.</li>
+      <li>Explicación de uso y 30 días de garantía inicial.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="label">Adicional opcional</div>
+<div class="opt">
+  <div>
+    <b>Registro de ventas</b>
+    <p style="margin:3pt 0 0">Registro de las ventas de artículos del box, como remeras y calleras, con historial de operaciones y consulta desde el sistema. No incluye comercio electrónico ni administración de inventario.</p>
+  </div>
+  <div class="amount">+ USD 250<small>Total con el módulo: USD 1.450</small></div>
+</div>
+
+<h3>Forma de pago</h3>
+<table class="t">
+  <tr><th>Etapa</th><th class="n" style="width:18%">Porcentaje</th><th class="n" style="width:18%">Importe</th></tr>
+  <tr><td>Anticipo, al iniciar</td><td class="n">40%</td><td class="n">USD 480</td></tr>
+  <tr><td>Sistema listo para revisión</td><td class="n">30%</td><td class="n">USD 360</td></tr>
+  <tr><td>Instalación y entrega</td><td class="n">30%</td><td class="n">USD 360</td></tr>
+  <tr class="total"><td>Total</td><td class="n">100%</td><td class="n">USD 1.200</td></tr>
+</table>
+<h3 style="margin-top:12pt">Condiciones comerciales</h3>
+<ul class="cond">
+  <li><b>Vigencia de la propuesta:</b> 15 días corridos desde su emisión.</li>
+  <li><b>Plazo de implementación:</b> 30 días corridos desde el cumplimiento de las condiciones de inicio.</li>
+  <li><b>Registro de ventas:</b> si se contrata, sus USD 250 se incorporan al mismo cronograma de pagos.</li>
+  <li><b>Equipamiento:</b> el modelo de tablet y teclado se especifica y aprueba antes de su compra.</li>
+  <li><b>Ampliaciones:</b> las nuevas funcionalidades o los cambios de alcance se presupuestan y aprueban por separado.</li>
+  <li><b>Moneda:</b> valores en dólares estadounidenses. El medio de pago, la conversión a pesos si corresponde y los impuestos aplicables se informan antes de la contratación.</li>
+  <li><b>Conectividad:</b> el sistema requiere internet. Ante un corte, la recepción aplica un procedimiento manual acordado.</li>
+</ul>
+</div>
+<div class="foot"><span>Flownix · Propuesta comercial · CrossFit Control</span><span>Página 5 de 6</span></div></div>
+
+<!-- 6 · Condiciones y aceptación -->
+<div class="page"><div class="body">
+<div class="top"><span class="firm">FLOWNIX</span><span class="doc">Propuesta comercial · 9 de octubre de 2026</span></div>
+<div class="sec">
+<h2>Alcance del mantenimiento</h2>
+<p>Un cambio funcional pedido por el cliente se cotiza aparte aunque demande menos de una hora. El límite mensual de tiempo no convierte cualquier pedido en ajuste menor.</p>
+<table class="t plain">
+  <tr><th style="width:50%">Se considera ajuste menor</th><th>No se considera ajuste menor</th></tr>
+  <tr><td>Cambiar etiquetas o textos de botones</td><td>Crear una pantalla nueva</td></tr>
+  <tr><td>Reordenar campos existentes</td><td>Incorporar nuevos formularios</td></tr>
+  <tr><td>Ajustar colores o detalles visuales puntuales</td><td>Rediseñar la interfaz</td></tr>
+  <tr><td>Modificar el mensaje predeterminado de WhatsApp</td><td>Automatizar el envío de WhatsApp</td></tr>
+  <tr><td>Modificar reglas configurables ya previstas</td><td>Crear una nueva modalidad de membresía</td></tr>
+  <tr><td>Pequeñas correcciones en filtros existentes</td><td>Desarrollar informes nuevos</td></tr>
+  <tr><td>Ajustar parámetros de horarios existentes</td><td>Desarrollar un sistema de reservas</td></tr>
+</table>
+<p class="note">La corrección de errores del software no consume los 60 minutos mensuales. Las configuraciones que el dueño puede hacer desde el sistema tampoco, salvo que requiera asistencia.</p>
+<p><b>Quedan fuera del mantenimiento:</b> funcionalidades o módulos nuevos; rediseños o cambios sustanciales de funcionamiento; integraciones con plataformas no contratadas; visitas presenciales, reinstalaciones o reemplazo de hardware; reparación de la tablet, el teclado o sus accesorios; problemas de red, Wi‑Fi, electricidad o internet del establecimiento; cargas masivas de datos o reconstrucción extensa de información; costos de terceros, licencias y servicios no contemplados; y modificaciones que superen el límite mensual de ajustes menores.</p>
+</div>
+
+<div class="sec">
+<h2>Datos, software y finalización</h2>
+<ul class="cond">
+  <li><b>Propiedad de los datos.</b> La información de socios, pagos y asistencias pertenece al box. Si la contratación finaliza, Flownix entrega una exportación en un formato utilizable, en las condiciones que se acuerden.</li>
+  <li><b>Propiedad del software.</b> El software y su código fuente son propiedad de Flownix. La contratación no incluye la cesión del código ni exclusividad comercial.</li>
+  <li><b>Finalización del servicio.</b> Cualquiera de las partes puede dar de baja el mantenimiento con 30 días de aviso. La baja implica el fin del alojamiento y del acceso al software, una vez completados la exportación de datos y el cierre.</li>
+</ul>
+</div>
+
+<div class="sign">
+  <div><div class="party">Por el box</div><div class="line">Firma</div><div class="line">Aclaración</div><div class="line">Fecha</div></div>
+  <div><div class="party">Por Flownix</div><div class="line">Firma</div><div class="line">Aclaración</div><div class="line">Fecha</div></div>
+</div>
+</div>
+<div class="foot"><span>Flownix · Propuesta comercial · CrossFit Control</span><span>Página 6 de 6</span></div></div>
 </body></html>
