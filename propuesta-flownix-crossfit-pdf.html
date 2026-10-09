@@ -1,188 +1,190 @@
 <!doctype html>
 <html lang="es"><head><meta charset="utf-8">
-<title>Propuesta para Guille | Box de CrossFit · Flownix</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700;9..40,800&display=swap">
+<title>Propuesta comercial · Sistema de gestión para box de CrossFit · Flownix</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Source+Sans+3:wght@400;600;700&display=swap">
 <style>
-@page{size:A4;margin:0}
-:root{--bg:#080d19;--panel:#101827;--panel2:#13203a;--ink:#f8faff;--muted:#c1cbdb;--soft:#aab6ca;--line:#263247;--blue:#3f7bff;--blue-2:#9dbaff;--green:#72d9ab;--yellow:#ffd36b;--red:#ff8585}
+@page{size:A4;margin:22mm 20mm 20mm}
+:root{--ink:#1c1f23;--muted:#545a61;--rule:#c9ced4;--soft:#f2f4f6;--navy:#1f3550}
 *{box-sizing:border-box}
-html,body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans","Segoe UI",Arial,sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-.page{width:210mm;height:297mm;padding:15mm 16mm 13mm;position:relative;overflow:hidden;display:flex;flex-direction:column;page-break-after:always;
-  background:linear-gradient(#ffffff07 1px,transparent 1px),linear-gradient(90deg,#ffffff07 1px,transparent 1px),radial-gradient(circle at 85% 0,#132341 0,transparent 95mm),var(--bg);background-size:9mm 9mm,9mm 9mm,auto,auto}
-.page:last-child{page-break-after:auto}
-header{display:flex;align-items:center;justify-content:space-between;padding-bottom:9px;border-bottom:1px solid var(--line)}
-.brand{font-weight:800;letter-spacing:.06em;font-size:13px}.brand i{color:var(--blue);font-style:normal}
-.draft{font-size:8.5px;color:#ffdf9a;border:1px solid #6c542e;padding:3px 9px;border-radius:99px;letter-spacing:.06em}
-.eyebrow{color:var(--blue-2);font-size:8.5px;text-transform:uppercase;letter-spacing:.14em;font-weight:700}
-h1{font-size:34px;line-height:1.05;letter-spacing:-.04em;margin:10px 0 12px;max-width:150mm}
-h2{font-size:21px;line-height:1.15;letter-spacing:-.025em;margin:5px 0 10px}
-h3{font-size:13px;line-height:1.25;margin:0 0 6px}
-p{margin:0}
-.hero{padding:20px 0 16px}
-.lead{color:var(--muted);font-size:11px;line-height:1.55;max-width:160mm;margin-bottom:10px}
-section{padding:14px 0;border-top:1px solid var(--line)}
-section.first{border-top:0}
-ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:5px}
-li{position:relative;padding-left:14px;font-size:10.5px;line-height:1.5;color:var(--muted)}
-li::before{content:"";position:absolute;left:1px;top:6.3px;width:5px;height:5px;border-radius:50%;background:var(--blue)}
-li b{color:var(--ink);font-weight:700}
-ul.check li::before{content:"✓";background:none;width:auto;height:auto;top:0;left:0;color:var(--green);font-weight:800;font-size:10px}
-ul.cross li::before{content:"✕";background:none;width:auto;height:auto;top:0;left:0;color:var(--red);font-weight:800;font-size:9px}
-ul.hero-list li{font-size:12px;color:#d5deeb}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 13px}
-.tag{font:700 8px ui-monospace,Menlo,monospace;color:#91adf3;letter-spacing:.1em;text-transform:uppercase;margin-bottom:5px}
-.steps{display:flex;flex-direction:column;gap:8px}
-.step{display:flex;gap:9px}
-.step b.n{flex:0 0 20px;height:20px;border-radius:50%;display:grid;place-items:center;background:#1b2b4b;color:#a8c0ff;font-size:10px}
-.step strong{font-size:11.5px;display:block;margin-bottom:3px}
-.states{display:flex;gap:6px;flex-wrap:wrap;margin-top:5px}
-.states span{background:#172238;border:1px solid #2b3950;border-radius:99px;padding:3px 9px;font-size:9.5px}
-.dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:5px}.green{background:var(--green)}.yellow{background:var(--yellow)}.red{background:var(--red)}
-.note{border-left:3px solid var(--blue);border-radius:0 9px 9px 0;background:#111d31;padding:9px 12px;margin-top:9px}
-.note li{color:#d2dced}
-.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
-.ms{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:10px 10px 11px}
-.ms .k{display:block;color:#91adf3;font-size:8.5px;font-weight:700;letter-spacing:.06em;margin-bottom:4px}
-.ms strong{display:block;font-size:11.5px;margin-bottom:6px}
-.ms li{font-size:9.5px;padding-left:11px}
-.ms li::before{width:4px;height:4px;top:6px}
-.price{font-size:12px;font-weight:800;color:#fff;margin-bottom:6px}
-.small{font-size:9px;color:var(--soft);margin-top:6px;line-height:1.5}
-table{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--line);border-radius:11px;overflow:hidden;margin:4px 0 10px}
-td{padding:8px 12px;font-size:10.5px;border-bottom:1px solid var(--line);color:var(--muted)}
-td:last-child{text-align:right;white-space:nowrap;color:#fff;font-weight:700}
-tr:last-child td{border-bottom:0}
-tr.main td{color:#fff}
-tr.main td:last-child{color:#b8cdff;font-size:12px}
-.pay{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:6px}
-.pay div{background:var(--panel2);border:1px solid #2a3c5e;border-radius:11px;padding:10px 12px}
-.pay strong{display:block;font-size:14px}
-.pay span{font-size:9.5px;color:var(--muted)}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:9px}
-.page>.hero,.page>section{zoom:1.2}
-footer{margin-top:auto;border-top:1px solid var(--line);padding-top:8px;color:#93a1b6;font-size:8.5px;display:flex;justify-content:space-between}
-.cta{margin-top:12px;background:var(--panel2);border:1px solid #2a3c5e;border-radius:12px;padding:12px 14px;font-size:12px}
-.cta b{color:var(--blue-2)}
+html,body{margin:0;color:var(--ink);background:#fff;font:10.5pt/1.5 "Source Serif 4",Georgia,"Times New Roman",serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+p{margin:0 0 7pt}
+h1{font-size:22pt;line-height:1.15;margin:0 0 4pt;font-weight:700;color:var(--navy)}
+h2{font-size:13pt;margin:20pt 0 8pt;padding-bottom:3pt;border-bottom:1pt solid var(--navy);color:var(--navy);font-weight:700;break-after:avoid}
+h3{font-size:11pt;margin:12pt 0 5pt;font-weight:700;break-after:avoid}
+ul,ol{margin:0 0 8pt;padding-left:16pt}
+li{margin:0 0 3pt}
+.sans,table,.meta{font-family:"Source Sans 3","Helvetica Neue",Arial,sans-serif}
+.top{display:flex;justify-content:space-between;align-items:baseline;border-bottom:2pt solid var(--navy);padding-bottom:6pt;margin-bottom:22pt}
+.top .firm{font-family:"Source Sans 3",Arial,sans-serif;font-weight:700;letter-spacing:.18em;font-size:11pt;color:var(--navy)}
+.top .doc{font-family:"Source Sans 3",Arial,sans-serif;font-size:9pt;color:var(--muted)}
+.subtitle{font-size:12pt;color:var(--muted);margin-bottom:14pt}
+.meta{width:100%;border-collapse:collapse;margin-bottom:6pt;font-size:9.5pt}
+.meta td{padding:4pt 0;border-bottom:.5pt solid var(--rule);vertical-align:top}
+.meta td:first-child{width:34mm;color:var(--muted)}
+table.t{width:100%;border-collapse:collapse;line-height:1.3;margin:4pt 0 10pt;font-size:9.5pt;break-inside:avoid}
+table.t th{background:var(--navy);color:#fff;text-align:left;font-weight:600;padding:5pt 7pt}
+table.t td{padding:3.6pt 7pt;border-bottom:.5pt solid var(--rule);vertical-align:top}
+table.t tr.group td{background:var(--soft);font-weight:700;color:var(--navy);border-bottom:.5pt solid var(--rule)}
+table.t tr.total td{font-weight:700;border-top:1pt solid var(--navy);border-bottom:0}
+table.t td.n,table.t th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.note{font-size:9.5pt;color:var(--muted)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:0 14pt}
+.cols h3{margin-top:6pt}
+.keep{break-inside:avoid}
+.sign{margin-top:22pt;display:grid;grid-template-columns:1fr 1fr 1fr;gap:16pt;break-inside:avoid}
+.sign div{border-top:.75pt solid var(--ink);padding-top:3pt;font-family:"Source Sans 3",Arial,sans-serif;font-size:9pt;color:var(--muted)}
+.swatch{display:inline-block;width:8pt;height:8pt;border-radius:50%;vertical-align:-.5pt;margin-right:5pt}
 </style></head><body>
 
-<!-- Página 1 -->
-<div class="page">
-<header><div class="brand">FLOWNIX <i> / </i>BOX</div><div class="draft">PROPUESTA PARA REVISAR</div></header>
-<div class="hero">
-  <div class="eyebrow">Propuesta para Guille · 9 de octubre de 2026</div>
-  <h1>Las cuotas y la asistencia del box, sin el cuaderno.</h1>
-  <p class="lead">Hoy todo se anota en un cuaderno, y para saber quién debe la cuota o cuánta gente vino hay que revisarlo página por página. Con el sistema:</p>
-  <ul class="hero-list">
-    <li>Cada alumno <b>marca su llegada con el DNI</b> en una tablet en la recepción.</li>
-    <li>El equipo ve al instante <b>si la cuota está al día</b>.</li>
-    <li>Vos ves <b>cuotas, pagos y asistencia</b> en un solo lugar.</li>
-  </ul>
-  <p class="small">Sistema web para el box · Incluye la tablet y el teclado numérico para la recepción.</p>
+<div class="top"><span class="firm">FLOWNIX</span><span class="doc">Propuesta comercial · 9 de octubre de 2026</span></div>
+
+<h1>Sistema de gestión de socios, cuotas y asistencia</h1>
+<p class="subtitle">Propuesta para el box de CrossFit</p>
+
+<table class="meta">
+  <tr><td>Destinatario</td><td>Guille, dueño del box</td></tr>
+  <tr><td>Preparado por</td><td>Flownix</td></tr>
+  <tr><td>Fecha</td><td>9 de octubre de 2026</td></tr>
+</table>
+
+<h2>1. Situación actual y objetivo</h2>
+<p>Hoy la asistencia y las cuotas se registran en un cuaderno. Para saber quién tiene la cuota vencida o cuántos alumnos vinieron a una clase hay que revisarlo a mano.</p>
+<p>La propuesta reemplaza ese registro por un sistema web con una tablet en la recepción, con tres objetivos:</p>
+<ul>
+  <li>Registrar la llegada de cada alumno con su DNI.</li>
+  <li>Mostrar en el momento el estado de su cuota.</li>
+  <li>Tener socios, pagos y asistencia en un mismo lugar.</li>
+</ul>
+
+<h2>2. Funcionamiento</h2>
+<h3>2.1 Registro en la recepción</h3>
+<ol>
+  <li>El alumno ingresa su DNI en la tablet. No necesita instalar ninguna aplicación.</li>
+  <li>La pantalla muestra el estado de su cuota.</li>
+  <li>El sistema registra la asistencia y la clase a la que asistió.</li>
+</ol>
+<table class="t">
+  <tr><th style="width:30%">Estado</th><th>Significado</th></tr>
+  <tr><td><span class="swatch" style="background:#2e9e62"></span>Al día</td><td>La cuota está paga.</td></tr>
+  <tr><td><span class="swatch" style="background:#d9a400"></span>Por vencer</td><td>La cuota vence en 7 días o menos.</td></tr>
+  <tr><td><span class="swatch" style="background:#c43c3c"></span>Vencida</td><td>La cuota no se renovó. El sistema muestra el aviso, pero no impide el ingreso: esa decisión queda a criterio del box.</td></tr>
+</table>
+
+<h3>2.2 Usuarios y permisos</h3>
+<table class="t">
+  <tr><th style="width:30%">Usuario</th><th>Acceso</th></tr>
+  <tr><td>Dueño</td><td>Socios, pagos y clases. Ingresos, montos y reportes básicos son de acceso exclusivo.</td></tr>
+  <tr><td>Entrenadores (4)</td><td>Asistencia de su clase desde el celular. El alta de socios y el registro de pagos se habilitan según los permisos que se acuerden.</td></tr>
+  <tr><td>Alumnos</td><td>Ingreso del DNI en la tablet de la recepción.</td></tr>
+</table>
+
+<h3>2.3 Alcance y condiciones de uso</h3>
+<ul>
+  <li>Se contempla una única membresía, sin límite de días de entrenamiento.</li>
+  <li>El sistema registra la asistencia por clase. No incluye reservas ni control de cupos.</li>
+  <li>Requiere conexión a internet para registrar la asistencia en tiempo real.</li>
+  <li>Ante un corte de conexión, se aplica un procedimiento manual acordado previamente con la recepción.</li>
+</ul>
+
+<h2>3. Plan de implementación</h2>
+<table class="t">
+  <tr><th style="width:30%">Etapa</th><th>Actividades</th></tr>
+  <tr><td>1. Definición</td><td>Datos de los socios a cargar, forma de distinguir las clases y permisos de cada usuario.</td></tr>
+  <tr><td>2. Preparación</td><td>Configuración del sistema, la tablet y el teclado numérico. El modelo de los equipos se confirma con el box antes de la instalación.</td></tr>
+  <tr><td>3. Prueba piloto</td><td>Uso en una clase para verificar el registro de asistencia, el estado de las cuotas y el funcionamiento en la recepción.</td></tr>
+  <tr><td>4. Entrega</td><td>Ajustes acordados y explicación de uso al equipo.</td></tr>
+</table>
+<p class="note">El plazo de implementación se confirma al cerrar el alcance y los equipos.</p>
+
+<h2>4. Módulos opcionales</h2>
+<div class="cols">
+  <div class="keep">
+    <h3>Registro de ventas</h3>
+    <ul>
+      <li>Registro de las ventas del box (remeras, calleras y otros artículos).</li>
+      <li>Consulta del historial de ventas.</li>
+      <li>Lista de productos definida junto con el box.</li>
+      <li>No incluye tienda online, cobros por la web ni control de stock.</li>
+    </ul>
+  </div>
+  <div class="keep">
+    <h3>Recordatorios de vencimiento</h3>
+    <ul>
+      <li>Aviso al socio antes del vencimiento de la cuota.</li>
+      <li>Medio de envío y anticipación definidos por el box.</li>
+      <li>El proveedor de mensajes y el consentimiento de los socios se acuerdan antes de activarlo.</li>
+      <li>El costo de cada mensaje se cobra aparte, según el proveedor.</li>
+    </ul>
+  </div>
 </div>
 
-<section>
-  <div class="eyebrow">Cuando llega un alumno</div>
-  <h2>Pone su DNI y en la recepción ya saben si está al día.</h2>
-  <div class="grid">
-    <div class="card steps">
-      <div class="step"><b class="n">1</b><div><strong>Pone su DNI</strong><ul><li>En la tablet de la recepción.</li><li>No hace falta bajar ninguna app.</li></ul></div></div>
-      <div class="step"><b class="n">2</b><div><strong>Ve cómo está su cuota</strong><div class="states"><span><i class="dot green"></i>Al día</span><span><i class="dot yellow"></i>Vence en 7 días o menos</span><span><i class="dot red"></i>Vencida</span></div></div></div>
-      <div class="step"><b class="n">3</b><div><strong>Queda anotada la asistencia</strong><ul><li>Se registra a qué clase vino.</li><li>Si la cuota está vencida, el sistema avisa pero no le impide entrar. Eso lo decide el box.</li></ul></div></div>
-    </div>
-    <div style="display:flex;flex-direction:column;gap:9px">
-      <div class="card"><div class="tag">Durante la clase</div><h3>Los entrenadores, desde el celular</h3>
-        <ul><li>Cada uno de los <b>cuatro entrenadores</b> ve quién vino a su clase.</li><li>Si querés, también pueden <b>dar de alta socios</b> o <b>registrar pagos</b>.</li><li>Los permisos los definimos juntos.</li></ul></div>
-      <div class="card"><div class="tag">Para vos</div><h3>El panel del dueño</h3>
-        <ul><li>Manejás <b>socios, pagos y clases</b>.</li><li>Los <b>ingresos, los montos y los reportes básicos</b> los ves solo vos.</li></ul></div>
-    </div>
+<h2>5. Qué incluye la contratación</h2>
+<div class="cols">
+  <div class="keep">
+    <h3>La gestión base incluye</h3>
+    <ul>
+      <li>Sistema de gestión.</li>
+      <li>Tablet y teclado numérico, con cables y cargadores.</li>
+      <li>Instalación estándar sobre el escritorio de la recepción.</li>
+      <li>Configuración de la recepción.</li>
+      <li>Prueba piloto con una clase.</li>
+      <li>Explicación de uso al equipo.</li>
+      <li>Reportes básicos.</li>
+    </ul>
   </div>
-  <div class="note"><ul>
-    <li>Hay <b>una sola membresía</b> y no limita los días de entrenamiento.</li>
-    <li>El sistema registra la asistencia de cada clase, pero <b>no maneja reservas ni cupos</b>.</li>
-  </ul></div>
-</section>
-<footer><span>Flownix · Propuesta para Guille | Box de CrossFit</span><span>1 / 3</span></footer>
+  <div class="keep">
+    <h3>El mantenimiento incluye</h3>
+    <ul>
+      <li>Alojamiento y funcionamiento del sistema.</li>
+      <li>Corrección de fallas.</li>
+      <li>Asistencia ante errores de carga.</li>
+      <li>Ajustes menores dentro del alcance acordado.</li>
+    </ul>
+    <p class="note">No incluye nuevas funciones ni módulos. Los informes adicionales se cotizan por separado.</p>
+  </div>
+</div>
+<p class="note">Si la instalación requiere un montaje especial o trabajo adicional en el box, se acuerda antes de coordinar la visita.</p>
+
+<div style="break-before:page"></div>
+<h2>6. Inversión y esquema de pago</h2>
+<p>Todos los valores están expresados en dólares estadounidenses.</p>
+<h3>Valores</h3>
+<table class="t">
+  <tr><th>Concepto</th><th class="n" style="width:28%">Importe</th></tr>
+  <tr class="group"><td colspan="2">Inversión inicial (pago único)</td></tr>
+  <tr><td>Gestión base</td><td class="n">USD 1.200</td></tr>
+  <tr><td>Módulo opcional: registro de ventas</td><td class="n">USD 250</td></tr>
+  <tr><td>Módulo opcional: recordatorios de vencimiento</td><td class="n">USD 300</td></tr>
+  <tr class="group"><td colspan="2">Total inicial según la opción elegida</td></tr>
+  <tr><td>Gestión base</td><td class="n">USD 1.200</td></tr>
+  <tr><td>Gestión base + registro de ventas</td><td class="n">USD 1.450</td></tr>
+  <tr><td>Gestión base + recordatorios de vencimiento</td><td class="n">USD 1.500</td></tr>
+  <tr><td>Gestión base + ambos módulos</td><td class="n">USD 1.750</td></tr>
+  <tr class="group"><td colspan="2">Costos mensuales</td></tr>
+  <tr><td>Mantenimiento, desde la puesta en marcha</td><td class="n">USD 50 por mes</td></tr>
+  <tr><td>Mensajes de recordatorios (solo si se contrata el módulo)</td><td class="n">Según proveedor y uso</td></tr>
+</table>
+
+<div class="keep">
+<h3>Esquema de pago</h3>
+<p>La gestión base se abona en tres pagos, vinculados al avance del trabajo:</p>
+<table class="t">
+  <tr><th style="width:20%">Pago</th><th class="n" style="width:10%">%</th><th class="n" style="width:16%">Importe</th><th>Momento</th></tr>
+  <tr><td>Anticipo</td><td class="n">40%</td><td class="n">USD 480</td><td>Al iniciar el trabajo.</td></tr>
+  <tr><td>Segundo pago</td><td class="n">30%</td><td class="n">USD 360</td><td>Al revisar el sistema en funcionamiento, antes de la instalación.</td></tr>
+  <tr><td>Pago final</td><td class="n">30%</td><td class="n">USD 360</td><td>Al instalar el sistema y entregarlo al equipo.</td></tr>
+  <tr class="total"><td>Total</td><td class="n">100%</td><td class="n">USD 1.200</td><td></td></tr>
+</table>
+<ul>
+  <li>Los módulos opcionales, si se contratan, se suman al precio base.</li>
+  <li>El mantenimiento se abona mensualmente desde la puesta en marcha.</li>
+</ul>
 </div>
 
-<!-- Página 2 -->
-<div class="page">
-<header><div class="brand">FLOWNIX <i> / </i>BOX</div><div class="draft">PROPUESTA PARA REVISAR</div></header>
-<section class="first" style="padding-top:18px">
-  <div class="eyebrow">Cómo lo ponemos en marcha</div>
-  <h2>Cuatro pasos hasta que tu equipo lo use solo.</h2>
-  <ul style="margin-bottom:12px">
-    <li>Armamos el sistema y lo instalamos <b>junto con vos</b>.</li>
-    <li>Antes de usarlo en todas las clases, <b>lo probamos en una sola</b> para ver que alumnos y entrenadores lo entiendan bien.</li>
-  </ul>
-  <div class="timeline">
-    <div class="ms"><span class="k">01 / DEFINIMOS</span><strong>Datos y permisos</strong><ul><li>Qué datos de cada socio cargamos.</li><li>Cómo diferenciamos las clases.</li><li>Qué puede hacer cada uno.</li></ul></div>
-    <div class="ms"><span class="k">02 / PREPARAMOS</span><strong>Sistema y equipos</strong><ul><li>Configuramos el sistema.</li><li>Preparamos la tablet y un teclado numérico compatible.</li><li>Antes de instalarlos, confirmamos el modelo con vos.</li></ul></div>
-    <div class="ms"><span class="k">03 / PROBAMOS</span><strong>Una clase de prueba</strong><ul><li>Que la asistencia se anote bien.</li><li>Que las cuotas muestren el estado correcto.</li><li>Que la recepción funcione sin trabas.</li></ul></div>
-    <div class="ms"><span class="k">04 / ARRANCAMOS</span><strong>Entrega al equipo</strong><ul><li>Hacemos los ajustes que acordemos.</li><li>Le explicamos al equipo cómo usarlo.</li></ul></div>
-  </div>
-  <div class="note"><ul>
-    <li>El sistema <b>necesita internet</b> para registrar la asistencia en el momento.</li>
-    <li>Para los cortes, acordamos de antemano cómo anotar a mano en la recepción.</li>
-    <li>El plazo lo confirmamos cuando cerremos el alcance y los equipos.</li>
-  </ul></div>
-</section>
-
-<section>
-  <div class="eyebrow">Opcionales</div>
-  <h2>Dos agregados, por si los necesitás.</h2>
-  <div class="two">
-    <div class="card"><div class="tag">Opcional</div><h3>Registro de ventas</h3><div class="price">+ USD 250</div>
-      <ul class="check"><li>Anotás lo que se vende en el box: remeras, calleras y otros artículos.</li><li>Lo consultás cuando quieras.</li><li>La lista de productos la armamos con vos.</li></ul>
-      <ul class="cross" style="margin-top:6px"><li>Es un registro interno: no incluye tienda online, cobros por la web ni control de stock.</li></ul></div>
-    <div class="card"><div class="tag">Opcional</div><h3>Recordatorios de vencimiento</h3><div class="price">+ USD 300</div>
-      <ul class="check"><li>Le avisa al socio antes de que se le venza la cuota.</li><li>Elegís el medio y con cuánta anticipación.</li><li>Definimos juntos el proveedor y cómo aceptan los socios recibir los mensajes.</li></ul>
-      <ul class="cross" style="margin-top:6px"><li>Cada mensaje tiene un costo aparte, según el servicio que se use.</li></ul></div>
-  </div>
-  <ul style="margin-top:10px">
-    <li>Con los dos opcionales, la inversión inicial total es de <b>USD 1.750</b>.</li>
-    <li>Los reportes básicos ya vienen en la gestión base. Si necesitás otro informe, lo presupuestamos aparte.</li>
-  </ul>
-</section>
-<footer><span>Flownix · Propuesta para Guille | Box de CrossFit</span><span>2 / 3</span></footer>
+<div class="keep">
+<h2>7. Próximos pasos</h2>
+<p>Con la conformidad del box, se confirman los permisos y los equipos y se coordina la fecha de inicio.</p>
+<div class="sign"><div>Firma</div><div>Aclaración</div><div>Fecha</div></div>
 </div>
 
-<!-- Página 3 -->
-<div class="page">
-<header><div class="brand">FLOWNIX <i> / </i>BOX</div><div class="draft">PROPUESTA PARA REVISAR</div></header>
-<section class="first" style="padding-top:18px">
-  <div class="eyebrow">Inversión y forma de pago</div>
-  <h2>Qué incluye y cuánto cuesta.</h2>
-  <div class="two">
-    <div class="card"><h3>El precio base incluye</h3>
-      <ul class="check"><li>El sistema de gestión.</li><li>La tablet y el teclado numérico, con cables y cargadores.</li><li>La instalación sobre el escritorio de la recepción.</li><li>La configuración.</li><li>La clase de prueba.</li><li>Una explicación de uso para el equipo.</li></ul>
-      <p class="small">Antes de instalar, confirmamos con vos el modelo de los equipos.</p></div>
-    <div class="card"><h3>Mantenimiento · USD 50 por mes</h3>
-      <p class="small" style="margin:0 0 6px">Desde que el box empieza a usar el sistema.</p>
-      <ul class="check"><li>Alojamiento del sistema y que siga funcionando.</li><li>Corrección de fallas.</li><li>Ayuda si se carga algo mal.</li><li>Ajustes chicos dentro de lo acordado.</li></ul>
-      <ul class="cross" style="margin-top:6px"><li>No incluye funciones ni módulos nuevos.</li><li>Los mensajes de los recordatorios se pagan aparte, según el proveedor y cuántos se manden.</li></ul></div>
-  </div>
-
-  <h3 style="margin:14px 0 4px">Opciones</h3>
-  <table>
-    <tr class="main"><td>Gestión base: sistema, equipos, configuración, clase de prueba y entrega</td><td>USD 1.200 · inicial</td></tr>
-    <tr><td>Base + registro de ventas</td><td>USD 1.450 · inicial</td></tr>
-    <tr><td>Base + recordatorios</td><td>USD 1.500 · inicial</td></tr>
-    <tr><td>Completo: base + ventas + recordatorios</td><td>USD 1.750 · inicial</td></tr>
-    <tr><td>Mantenimiento</td><td>USD 50 por mes</td></tr>
-  </table>
-  <ul><li>Si la instalación necesita algo fuera de lo común o más trabajo en el box, lo acordamos antes.</li></ul>
-
-  <h3 style="margin:14px 0 2px">Cómo se paga la gestión base</h3>
-  <p class="small" style="margin-top:0">Los porcentajes son sobre los USD 1.200 de la base. Los opcionales se suman solo si los elegís.</p>
-  <div class="pay">
-    <div><strong>40% · USD 480</strong><span>Al empezar el trabajo.</span></div>
-    <div><strong>30% · USD 360</strong><span>Cuando ves el sistema funcionando, antes de instalarlo.</span></div>
-    <div><strong>30% · USD 360</strong><span>Al instalarlo y entregárselo al equipo.</span></div>
-  </div>
-
-  <div class="cta"><b>Si te cierra:</b> confirmamos los permisos y los equipos, y arrancamos.</div>
-</section>
-<footer><span>Flownix · Propuesta para Guille | Box de CrossFit</span><span>Borrador comercial · 09/10/2026 · 3 / 3</span></footer>
-</div>
 </body></html>
